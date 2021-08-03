@@ -8,7 +8,7 @@ post = input("post: ")
 access_token = input("token: ")
 
 def click():
-    ## move and click to code input
+    ## move and click to code inputhttps://github.com/nxhdev2002/lolAutoCode/blob/master/a.py
     pyautogui.moveTo(1200, 825)
     pyautogui.click()
 
