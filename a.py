@@ -35,7 +35,7 @@ def redeem(code, token):
 
 def main():
     token = getToken()
-    print(token)
+    # print(token)
     a = ''
     while True:
         # get lastest comment from graph api
@@ -50,9 +50,11 @@ def main():
                 print(a)
                 rs = redeem(a[0:13], token)
                 print(rs)
-                if (rs['current_token_amount'] == 500):
-                    print("done")
-                    break
-                
+                try:
+                    if (rs['current_token_amount'] == 500):
+                        print("done")
+                        break
+                except:
+                    pass
 if __name__ == "__main__":
     main()
